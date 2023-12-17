@@ -12,6 +12,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +36,30 @@ header a {
   text-align: center;
 }
 
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--quinary);
+  transition: 0.5s;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+
+header a img {
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 11px 10px var(--quinary);
+  border: 1px solid var(--tertiary);
+}
+
 .navbar {
   display: flex;
   width: 100%;
@@ -56,46 +81,46 @@ main {
   height: 80%;
 }
 
-.circle-container {
+.welcome-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
 }
 
-.circle {
-  width: 300px;
-  height: 300px;
-  background-color: var(--secondary);
-  border: 1px solid var(--tertiary);
-  border-radius: 50%;
-  box-shadow: 0px 0px 11px 10px var(--quinary);
-}
-
-.title {
-  width: 100%;
-  height: 100%;
-  font-size: 30px;
-  color: var(--quinary);
+.welcome {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.text {
+  width: 660px;
+  height: 100%;
+  color: var(--quinary);
 }
 
 .arrow {
   width: 50px;
   height: 50px;
   margin: 50px auto;
+  display: block;
 }
 
 .bxs-chevron-down {
   font-size: 50px;
   color: var(--quinary);
+  transition: 0.5s;
 }
 
-.title-skills {
+.bxs-chevron-down:hover{
+  transform: scale(1.5);
+}
+
+.title {
   color: var(--quinary);
   font-size: 50px;
+  text-align: center;
 }
 
 .skills-and-tools {
@@ -108,9 +133,6 @@ main {
 .container-icons {
   display: flex;
   flex-wrap: wrap;
-  /* place-content: center; */
-  /* align-items: center; */
-  /* width: 80%; */
   margin-top: 50px;
 }
 
@@ -125,7 +147,7 @@ i {
   font-size: 60px;
 }
 
-.works {
+.project {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -134,11 +156,16 @@ i {
   margin-top: 100px;
 }
 
-.works-responsive {
+p.text {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.project-responsive {
   display: none;
 }
 
-.container-work {
+.container-project {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -172,14 +199,14 @@ h4 {
   color: var(--quinary);
 }
 
-.container-work-btns {
+.container-project-btns {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
 }
 
-a.btn.btn-view-work {
+a.btn.btn-view-project {
   text-decoration: none;
   color: var(--quinary);
   background: var(--secondary);
@@ -187,6 +214,11 @@ a.btn.btn-view-work {
   border: 1px solid var(--quinary);
   border-radius: 10%;
   margin: 10px;
+  transition: 0.5s;
+}
+
+a.btn.btn-view-project:hover{
+  background: var(--tertiary);
 }
 
 footer.footer {
@@ -196,13 +228,22 @@ footer.footer {
   align-items: center;
   margin: 40px;
   gap: 20px;
+  height: 200px;
+}
+
+.info{
+  list-style: none;
+  color: var(--quinary);
+  text-align: center;
 }
 
 .social-media .links a {
   color: var(--quinary);
+  
 }
 
-.social-media-title {
+
+.footer-title {
   color: var(--quinary);
   font-size: 40px;
   text-align: center;
@@ -210,26 +251,40 @@ footer.footer {
 
 .social-media i {
   font-size: 30px;
+  transition: .5s;
+}
+
+.social-media i:hover{
+  transform: scale(1.5);
 }
 
 @media screen and (max-width: 1180px) {
-  .works {
+  .project {
     display: none;
   }
 
-  .works-responsive {
+  .project-responsive {
     display: flex;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .text {
+    width: 80%;
+  }
+
+  header .links {
+    margin: 40px;
+    margin-bottom: 0;
+  }
+
   .box-icon {
     font-size: 20px;
   }
-  .social-media-title {
+  .footer-title {
     font-size: 30px;
   }
-  
+
   .social-media i {
     font-size: 20px;
   }

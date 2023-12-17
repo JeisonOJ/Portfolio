@@ -178,11 +178,13 @@ p.text {
 .container-img {
   width: 460px;
   border: 2px solid var(--quinary);
+  height: 222px;
 }
 
 img {
   width: 100%;
   height: auto;
+  height: 100%;
 }
 
 .container-text {
@@ -197,6 +199,7 @@ img {
 h4 {
   font-size: 50px;
   color: var(--quinary);
+  text-align: center;
 }
 
 .container-project-btns {

@@ -319,7 +319,19 @@ footer.footer {
 }
 
 @media screen and (max-width: 480px) {
+  header .links {
+    display: block;
+  }
+
+  header .links li {
+    margin-top: 10px;
+  }
+
   .box-icon {
     font-size: 15px;
+  }
+
+  a.see-more{
+    width: auto;
   }
 }

@@ -2,6 +2,11 @@
 
 Welcome to my portfolio! This repository showcases my skills, projects, and experiences as a developer. Feel free to explore and connect with me.
 
+## 🔗 Links
+
+- **[Portfolio Website](https://portfolio-alpha-gilt-69.vercel.app/)**
+- **[Repository](https://github.com/JeisonOJ/Portfolio)** 
+
 ## 🌟 About Me
 
 Hi! I'm Jeison, a passionate developer with experience in:
@@ -17,4 +22,3 @@ Always eager to learn and collaborate on innovative projects.
 - Frameworks & Libraries: Spring Boot, React, Angular
 - Version Control: Git (commits, pull requests, revert, and collaboration)
 - Databases: SQL (inner joins, CRUD, and advanced queries via backend)
-
